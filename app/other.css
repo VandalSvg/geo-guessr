@@ -1,0 +1,115 @@
+/* Container for the whole app */
+.container {
+  background: rgba(255, 255, 255, 0.25); /* Semi-transparent white */
+  backdrop-filter: blur(12px);          /* The "Frosted Glass" effect */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 8px 162px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  backdrop-filter: blur(10px);          
+  max-width: 500px;
+  margin: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Using your specific local path */
+  background: url("../public/crystallized earth painting.jpg") no-repeat center center fixed;
+  background-size: cover;
+  box-shadow: 0 8px 162px rgba(0, 0, 0, 0.8);
+
+  /* backdrop-filter: blur(12px);           */
+  /* The "Frosted Glass" effect */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* solves issue of blur not covering screen when scrolling */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Elegant Title */
+h1 {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Modernizing the File Input */
+input[type="file"] {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* The Predict Button */
+button {
+  background: #6366f1; /* Modern Indigo */
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+button:hover {
+  background: #4f46e5;
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Hide the ugly default input */
+.file-input-hidden {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Style the label as the new button */
+.custom-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.custom-file-label:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.image-preview {
+  /* Ensures the image doesn't spill out */
+  /* max-width: 100%;
+  height: auto; */
+  
+  /* The border magic */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* semi-transparent black */
+  
+  /* Essential: match the rounded corners of your UI */
+  border-radius: 12px; 
+  
+  /* Optional: a tiny shadow to lift it slightly */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

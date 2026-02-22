@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "./alternative.css";
+import "./other.css";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -43,20 +43,23 @@ export default function Home() {
   }
 
   return (
-    <main style={{ padding: 30 }}>
+    <main className="container" style={{ padding: 30 }}>
       <h1 className="main-text">Geo Classifier</h1>
 
-      <input type="file" accept="image/*" onChange={handleFileChange} />
+      <label className="custom-file-label">
+        Upload Street View Image
+        <input className="file-input-hidden" type="file" accept="image/*" onChange={handleFileChange} />
+      </label>
 
       <div className="image-box">
       {preview && (
         <div style={{ marginTop: 20 }}>
-          <img src={preview} style={{ maxWidth: 400 }} />
+          <img className="image-preview" src={preview} style={{ maxWidth: 400, maxHeight: 400 }} />
         </div>
       )}
       </div>
 
-      <button
+      <button className="button"
         onClick={predict}
         disabled={!file}
         style={{ marginTop: 20 }}
