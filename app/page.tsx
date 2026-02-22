@@ -42,6 +42,16 @@ export default function Home() {
     }
   }
 
+  async function fakePredict() {
+    setTop5([{"country": "test", "confidence": 96},
+      {"country": "test2", "confidence": 97},
+      {"country": "test3", "confidence": 98},
+      {"country": "test4", "confidence": 99},
+      {"country": "test5", "confidence": 100},
+    ]);
+    return;
+  }
+
   return (
     <main className="container" style={{ padding: 30 }}>
       <h1 className="main-text">Geo Classifier</h1>
@@ -60,7 +70,7 @@ export default function Home() {
       </div>
 
       <button className="button"
-        onClick={predict}
+        onClick={fakePredict}
         disabled={!file}
         style={{ marginTop: 20 }}
       >
@@ -70,13 +80,13 @@ export default function Home() {
       
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
       {top5.length > 0 && (
-        <div style={{ marginTop: 24 }}>
+        <div className="results-box" style={{ marginTop: 24 }}>
           <h2>Top predictions</h2>
           <ol>
             {top5.map((p, i) => (
-              <li key={i}>
-                <strong>{p.country}</strong> — {(p.confidence * 100).toFixed(1)}%
-              </li>
+              <div key={i}>
+                <strong>{i+1}. {p.country}</strong> — {(p.confidence * 100).toFixed(1)}%
+              </div>
             ))}
           </ol>
         </div>
