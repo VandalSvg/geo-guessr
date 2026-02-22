@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       <button className="button"
-        onClick={fakePredict}
+        onClick={predict}
         disabled={!file}
         style={{ marginTop: 20 }}
       >
