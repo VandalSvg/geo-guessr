@@ -16,9 +16,12 @@ In Geo Classifier, the user uploads an image of a street view location of their 
 
 ### Disclaimers and notes
 
-Note: The use of bots is not permitted on competitive GeoGuessr games. 
+Disclaimer: The use of bots is not permitted on competitive GeoGuessr games. 
+
+Note: Generative AI was used to assist in many parts of this project.
 
 Image credits: https://picryl.com/media/manuscript-painting-of-heezen-tharp-world-ocean-floor-map-by-berann
+
 
 
 
