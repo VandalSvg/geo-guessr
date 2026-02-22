@@ -1,3 +1,5 @@
 # Geo Classifier
 
-![Geo Classifier Demo]("./public/Sample.png")
+<img src="./public/Sample.png" width = 500px>
+</img>
+
