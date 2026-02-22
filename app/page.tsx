@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import "./alternative.css";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -42,16 +43,18 @@ export default function Home() {
   }
 
   return (
-    <main style={{ padding: 40 }}>
-      <h1>Geo Classifier Demo</h1>
+    <main style={{ padding: 30 }}>
+      <h1 className="main-text">Geo Classifier</h1>
 
       <input type="file" accept="image/*" onChange={handleFileChange} />
 
+      <div className="image-box">
       {preview && (
         <div style={{ marginTop: 20 }}>
           <img src={preview} style={{ maxWidth: 400 }} />
         </div>
       )}
+      </div>
 
       <button
         onClick={predict}

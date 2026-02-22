@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* background: var(--background); */
+  background-image: url("../public/crystallized\ earth\ painting.jpg");
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  /* Add vendor prefix for broader compatibility, especially older Safari */
+  -webkit-backdrop-filter: blur(10px); 
+  box-shadow: inset 0px 8px 162px rgba(0, 0, 0, 0.8); /* Adjust values as needed */
+
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ededed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-text {
+    text-align: center;
+    font-family: "Georgia";
+    
+    font-size: 35pt;
+    background-color: rgba(51, 51, 51, 0.95);
+    border-radius: 10px;
+    border-color: #ededed;
+    /* size: 20vh; */
+}
+
+.image-box {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border-color: #ededed;
+}
+
+.frosted-box {
+  /* 1. Add a semi-transparent background color to enhance the effect */
+  background-color: rgba(255, 255, 255, 0.3);
+
+  /* 2. Apply the backdrop-filter with the blur function */
+  backdrop-filter: blur(10px);
+  /* Add vendor prefix for broader compatibility, especially older Safari */
+  -webkit-backdrop-filter: blur(10px); 
+
+  /* Optional: Add padding, border-radius, or box-shadow for styling */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
